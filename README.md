@@ -1,4 +1,4 @@
-mlops-mini-project
+Twitter Sentiment Analysis
 ==============================
 
 Twitter Sentiment Analysis
