@@ -14,7 +14,7 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: '3.10'
-          
+
       - name: Cache pip dependencies
         uses: actions/cache@v3
         with:
@@ -33,3 +33,11 @@ jobs:
 
         run: |
           dvc repro
+
+
+
+      - name: Run model tests
+        env:
+          DAGSHUB_PAT: ${{ secrets.DAGSHUB_PAT }}
+        run: |
+          python -m unittest tests/test_model.py
